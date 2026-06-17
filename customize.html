@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Customize Order
+
+    </title>
+    <style>
+        /* PAGE */
+
+        body {
+
+            margin: 0;
+
+            background: #FCFAF7;
+
+            font-family: 'Poppins', sans-serif;
+
+            color: #333;
+
+        }
+
+
+
+        .custom-page {
+
+            max-width: 1100px;
+
+            margin: 70px auto;
+
+            padding: 0 40px;
+
+        }
+
+
+
+        .custom-page h1 {
+
+            text-align: center;
+
+            font-size: 54px;
+
+            color: #6f5146;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .custom-page p {
+
+            text-align: center;
+
+            font-size: 18px;
+
+            max-width: 800px;
+
+            margin: 0 auto 60px;
+
+            line-height: 1.8;
+
+            color: #666;
+
+        }
+
+
+
+
+
+        /* FORM */
+
+        form {
+
+            background: white;
+
+            padding: 55px;
+
+            border-radius: 30px;
+
+            box-shadow:
+
+                0 15px 45px rgba(0, 0, 0, .06);
+
+        }
+
+
+
+        /* GRID */
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                1fr 1fr;
+
+            gap: 35px;
+
+        }
+
+
+
+        .field {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+
+
+
+        /* LABEL */
+
+        label {
+
+            margin-bottom: 10px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: #444;
+
+        }
+
+
+
+
+
+        /* INPUT */
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border:
+
+                1px solid #ddd;
+
+            border-radius: 14px;
+
+            font-size: 15px;
+
+            outline: none;
+
+            transition: .3s;
+
+            background: white;
+
+        }
+
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border:
+
+                1px solid #8c6658;
+
+            box-shadow:
+
+                0 0 10px rgba(140,
+                    102,
+                    88,
+                    .15);
+
+        }
+
+
+
+        textarea {
+
+            min-height: 180px;
+
+            resize: vertical;
+
+        }
+
+
+
+
+
+        /* FULL WIDTH */
+
+        .full {
+
+            grid-column:
+
+                1 / -1;
+
+        }
+
+
+
+
+
+        /* FILE */
+
+        input[type=file] {
+
+            padding: 12px;
+
+        }
+
+
+
+
+
+        /* BUTTON */
+
+        .submit-btn {
+
+            display: block;
+
+            margin:
+
+                40px auto 0;
+
+            padding:
+
+                18px 45px;
+
+            border: none;
+
+            background:
+
+                #8c6658;
+
+            color: white;
+
+            font-size: 16px;
+
+            border-radius: 40px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .submit-btn:hover {
+
+            background:
+
+                #715046;
+
+        }
+
+
+
+
+
+        /* HELP TEXT */
+
+        .note {
+
+            font-size: 14px;
+
+            color: #888;
+
+            margin-top: 10px;
+
+        }
+
+
+
+
+
+        /* MOBILE */
+
+        @media(max-width:850px) {
+
+            .form-grid {
+
+                grid-template-columns:
+
+                    1fr;
+
+            }
+
+
+
+            .custom-page {
+
+                padding: 20px;
+
+            }
+
+
+
+            .custom-page h1 {
+
+                font-size: 40px;
+
+            }
+
+        }
+    </style>
+
+    <link rel="stylesheet" href="democss.css">
+
+</head>
+
+<body>
+
+
+
+    <nav>
+
+        <div class="logo">
+
+            SPARSH-CARES
+
+        </div>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="bodycare.html">Body Care</a></li>
+
+            <li><a href="haircare.html">Hair Care</a></li>
+
+            <li><a href="facecare.html">Face Care</a></li>
+
+            <li><a href="candles.html">Candles</a></li>
+
+            <li><a href="customize.html">Customize</a></li>
+
+            <li><a href="wholesale.html">Wholesale</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <button class="nav-btn" onclick="location.href='index.html'">
+
+            Back
+
+        </button>
+
+    </nav>
+
+
+
+
+
+    <section class="custom-page">
+
+        <h1>
+
+            Customize Your Order
+
+        </h1>
+
+        <p>
+
+            Create soaps and candles made specially for your event.
+
+            Choose colours,
+            fragrance,
+            packaging,
+            labels and share your ideas.
+
+        </p>
+
+
+
+
+
+        <form id="customForm">
+
+
+
+            <div class="form-grid">
+
+
+
+                <div>
+
+                    <label>
+
+                        Product Type
+
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+
+                            Select
+
+                        </option>
+
+                        <option>
+
+                            Soap
+
+                        </option>
+
+                        <option>
+
+                            Candle
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Occasion
+
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+
+                            Select Occasion
+
+                        </option>
+
+                        <option>
+
+                            Birthday
+
+                        </option>
+
+                        <option>
+
+                            Kitty Party
+
+                        </option>
+
+                        <option>
+
+                            Wedding
+
+                        </option>
+
+                        <option>
+
+                            Baby Shower
+
+                        </option>
+
+                        <option>
+
+                            Corporate Event
+
+                        </option>
+
+                        <option>
+
+                            Festival
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Colour
+
+                    </label>
+
+                    <input required type="text" placeholder="Example: White, Pink">
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Fragrance
+
+                    </label>
+
+                    <input required type="text" placeholder="Example: Rose">
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Shape / Mould
+
+                    </label>
+
+                    <input required type="text" placeholder="Heart, Flower">
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Quantity
+
+                    </label>
+
+                    <input required type="number" placeholder="Minimum quantity">
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Packaging
+
+                    </label>
+
+                    <select>
+
+                        <option>
+
+                            Normal
+
+                        </option>
+
+                        <option>
+
+                            Custom Label
+
+                        </option>
+
+                        <option>
+
+                            Gift Packaging
+
+                        </option>
+
+                        <option>
+
+                            Luxury Packaging
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Event Date
+
+                    </label>
+
+                    <input required type="date">
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Preferred Delivery Date
+
+                    </label>
+
+                    <input required type="date">
+
+                </div>
+
+
+
+
+
+                <div>
+
+                    <label>
+
+                        Custom Label Text
+
+                    </label>
+
+                    <input type="text" placeholder="Names, wishes etc">
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <label>
+
+                Describe Your Customization
+
+            </label>
+
+            <textarea required rows="7" placeholder="Describe exactly how you want your product.
+
+Example:
+
+Theme
+Colours
+Decoration
+Names
+Design
+Special instructions">
+
+</textarea>
+
+
+
+
+
+            <label>
+
+                Upload Reference Image (Optional)
+
+            </label>
+
+            <input type="file" accept="image/*">
+
+
+
+
+
+            <label>
+
+                Budget Range (Optional)
+
+            </label>
+
+            <input type="text" placeholder="₹2000–₹5000">
+
+
+
+
+
+            <br>
+            <button type="submit">
+
+                Submit Custom Request
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+
+
+    <script>
+
+        document
+
+            .getElementById(
+
+                "customForm"
+
+            )
+
+            .addEventListener(
+
+                "submit",
+
+                function (e) {
+
+                    e.preventDefault();
+
+                    alert(
+
+                        "Customization request submitted"
+
+                    );
+
+                }
+
+            );
+
+    </script>
+
+
+
+</body>
+
+</html>

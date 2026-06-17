@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Contact
+
+    </title>
+
+    <link rel="stylesheet" href="democss.css">
+
+    <style>
+        .contact-page {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 60px;
+
+        }
+
+
+
+        .contact-header {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+
+        }
+
+
+
+        .contact-header h1 {
+
+            font-size: 56px;
+
+            color: #7b5d52;
+
+        }
+
+
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                1fr 1fr;
+
+            gap: 40px;
+
+        }
+
+
+
+        .contact-card,
+        .review-form {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 10px 25px rgba(0, 0, 0, .05);
+
+        }
+
+
+
+        .contact-card p {
+
+            margin: 15px 0;
+
+        }
+
+
+
+        .review-section {
+
+            margin-top: 80px;
+
+        }
+
+
+
+        .review-section h2 {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+
+        }
+
+
+
+        .review-list {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(2, 1fr);
+
+            gap: 25px;
+
+        }
+
+
+
+        .review {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 20px;
+
+        }
+
+
+
+        .review img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: contain;
+
+            border-radius: 15px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        textarea,
+        input {
+
+            width: 100%;
+
+            padding: 14px;
+
+            margin-top: 12px;
+
+            border:
+
+                1px solid #ddd;
+
+            border-radius: 12px;
+
+        }
+
+
+
+        button {
+
+            margin-top: 20px;
+
+        }
+
+
+
+        @media(max-width:900px) {
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .review-list {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+
+            SPARSH-CARE
+
+        </div>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+
+
+    <section class="contact-page">
+
+        <div class="contact-header">
+
+            <h1>
+
+                CONTACT US
+
+            </h1>
+
+            <p>
+
+                Get in touch for orders,
+                customization and business inquiries.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+
+                <h2>
+
+                    Contact Information
+
+                </h2>
+
+                <p>
+
+                    Monika Jain
+
+                </p>
+
+                <p>
+
+                    Email:
+                    sparsh.care@gmail.com<br>
+                    monikajainkota@gmail.com
+
+
+                </p>
+
+                <p>
+
+                    Phone:
+                    +91 94133 20383
+
+                </p>
+
+                <p>
+
+                    Address:
+                    Kota Rajasthan
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="review-form">
+
+                <h2>
+
+                    Send Message
+
+                </h2>
+
+                <input placeholder="Name">
+
+                <input placeholder="Email">
+
+                <textarea rows="5" placeholder="Write your message">
+
+</textarea>
+
+                <button>
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <section class="review-section">
+
+            <h2>
+
+                Reviews By Customers
+
+            </h2>
+
+
+
+
+
+            <div class="review-list" id="reviewList">
+
+
+
+                <div class="review">
+
+                    <h3>
+
+                        ginnii
+
+                    </h3>
+
+                    <p>
+
+                        Loved the customization <3
+
+                    </p>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="review-form">
+
+                <h2>
+
+                    Add Review
+
+                </h2>
+
+                <input id="name" placeholder="Your Name">
+
+
+
+                <textarea id="review" rows="5" placeholder="Write your review">
+
+</textarea>
+
+
+
+                <input id="photo" type="file" accept="image/*">
+
+
+
+                <button onclick="addReview()">
+
+                    Submit Review
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+
+
+    <script>
+
+        function addReview() {
+
+            let name =
+
+                document
+                    .getElementById(
+                        "name"
+                    ).value;
+
+            let text =
+
+                document
+                    .getElementById(
+                        "review"
+                    ).value;
+
+            let file =
+
+                document
+                    .getElementById(
+                        "photo"
+                    ).files[0];
+
+            if (
+
+                !name ||
+                !text
+
+            ) {
+
+                alert(
+
+                    "Fill all fields"
+
+                );
+
+                return;
+
+            }
+
+
+
+            let card =
+
+                document
+                    .createElement(
+                        "div"
+
+                    );
+
+            card.className =
+
+                "review";
+
+
+
+            let html =
+
+                "<h3>" + name + "</h3>";
+
+
+
+            if (file) {
+
+                let url =
+
+                    URL
+                        .createObjectURL(
+                            file
+
+                        );
+
+                html +=
+
+                    '<img src="' + url + '">';
+
+            }
+
+
+
+            html +=
+
+                "<p>" + text + "</p>";
+
+
+
+            card.innerHTML =
+
+                html;
+
+
+
+            document
+                .getElementById(
+                    "reviewList"
+                )
+
+                .prepend(
+
+                    card
+
+                );
+
+
+
+            document
+                .getElementById(
+                    "name"
+                ).value = "";
+
+
+
+            document
+                .getElementById(
+                    "review"
+                ).value = "";
+
+
+
+            document
+                .getElementById(
+                    "photo"
+                ).value = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

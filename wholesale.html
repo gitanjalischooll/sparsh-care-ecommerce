@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Wholesale Orders
+
+    </title>
+
+    <link rel="stylesheet" href="democss.css">
+
+    <style>
+        /* PAGE */
+
+        .wholesale-page {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 40px;
+
+        }
+
+
+
+        .hero {
+
+            text-align: center;
+
+            margin-bottom: 70px;
+
+        }
+
+
+
+        .hero h1 {
+
+            font-size: 56px;
+
+            color: #7b5d52;
+
+        }
+
+
+
+        .hero p {
+
+            max-width: 750px;
+
+            margin: 20px auto;
+
+            line-height: 1.8;
+
+            color: #666;
+
+        }
+
+
+
+        /* WHO */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin: 50px 0;
+
+        }
+
+
+
+        .card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+
+                0 8px 20px rgba(0, 0, 0, .05);
+
+        }
+
+
+
+        .card h3 {
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        /* FORM */
+
+        form {
+
+            background: white;
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            box-shadow:
+
+                0 8px 20px rgba(0, 0, 0, .06);
+
+        }
+
+
+
+        .grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                1fr 1fr;
+
+            gap: 25px;
+
+        }
+
+
+
+        .field {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+
+        label {
+
+            margin-bottom: 8px;
+
+            font-weight: 600;
+
+        }
+
+
+
+        input,
+        select,
+        textarea {
+
+            padding: 15px;
+
+            border:
+
+                1px solid #ddd;
+
+            border-radius: 12px;
+            
+
+        }
+
+
+
+        textarea {
+
+            min-height: 200px;
+
+            resize: horizontal;
+            
+
+        }
+
+
+
+        .full {
+
+            grid-column:
+
+                1/-1;
+
+        }
+
+
+
+        /* CHECKBOX */
+
+        .checkbox {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 10px;
+
+        }
+
+
+
+        .checkbox label {
+
+            font-weight: 400;
+
+        }
+
+
+
+        /* BUTTON */
+
+        .submit {
+
+            display: block;
+
+            margin: 40px auto 0;
+
+            padding:
+
+                18px 50px;
+
+            border: none;
+
+            border-radius: 40px;
+
+            background: #7b5d52;
+
+            color: white;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .submit:hover {
+
+            background: #65483e;
+
+        }
+
+
+
+        /* FOOTER CTA */
+
+        .cta {
+
+            text-align: center;
+
+            padding: 90px 0;
+
+        }
+
+
+
+        .cta h2 {
+
+            font-size: 42px;
+
+        }
+
+
+
+        @media(max-width:900px) {
+
+            .cards {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .checkbox {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+
+            SPARSH-CARES
+
+        </div>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="bodycare.html">Body Care</a></li>
+
+            <li><a href="haircare.html">Hair Care</a></li>
+
+            <li><a href="facecare.html">Face Care</a></li>
+
+            <li><a href="candles.html">Candles</a></li>
+
+            <li><a href="customize.html">Customize</a></li>
+
+            <li><a href="wholesale.html">Wholesale</a></li>
+
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+        <button class="nav-btn" onclick="location.href='index.html'">
+
+            Back
+
+        </button>
+
+    </nav>
+
+
+
+
+
+    <section class="wholesale-page">
+
+        <div class="hero">
+
+            <h1>
+
+                Wholesale & Bulk Orders
+
+            </h1>
+
+            <p>
+
+                Custom handmade products for businesses,
+                events,
+                gifting and private labels across India.
+
+            </p>
+
+        </div>
+
+
+
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+
+                    Retail Stores
+
+                </h3>
+
+                <p>
+
+                    Bulk handmade collections
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+                <h3>
+
+                    Corporate Gifting
+
+                </h3>
+
+                <p>
+
+                    Branded gifting solutions
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="card">
+
+                <h3>
+
+                    Events
+
+                </h3>
+
+                <p>
+
+                    Wedding and occasion orders
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <form>
+
+            <div class="grid">
+
+                <div class="field">
+
+                    <label>
+
+                        Business Name
+
+                    </label>
+
+                    <input required>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Contact Person
+
+                    </label>
+
+                    <input required>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Phone
+
+                    </label>
+
+                    <input required>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Email
+
+                    </label>
+
+                    <input required>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        GST (Optional)
+
+                    </label>
+
+                    <input>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        City
+
+                    </label>
+
+                    <input required>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="full">
+
+                <label>
+
+                    Products
+
+                </label>
+
+                <div class="checkbox">
+
+                    <label><input type="checkbox"> Soap</label>
+
+                    <label><input type="checkbox"> Hair Care</label>
+
+                    <label><input type="checkbox"> Candles</label>
+
+                    <label><input type="checkbox"> Body Care</label>
+
+                    <label><input type="checkbox"> Gift Boxes</label>
+
+                    <label><input type="checkbox"> Private Label</label>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="grid">
+
+                <div class="field">
+
+                    <label>
+
+                        Quantity
+
+                    </label>
+
+                    <select>
+
+                        <option>
+
+                            50–100
+
+                        </option>
+
+                        <option>
+
+                            100–500
+
+                        </option>
+
+                        <option>
+
+                            500–1000
+
+                        </option>
+
+                        <option>
+
+                            1000+
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Branding
+
+                    </label>
+
+                    <select>
+
+                        <option>
+
+                            No Branding
+
+                        </option>
+
+                        <option>
+
+                            Custom Logo
+
+                        </option>
+
+                        <option>
+
+                            White Label
+
+                        </option>
+
+                        <option>
+
+                            Luxury Packaging
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Event Date
+
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Delivery Date
+
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Budget
+
+                    </label>
+
+                    <select>
+
+                        <option>
+
+                            ₹5k–10k
+
+                        </option>
+
+                        <option>
+
+                            ₹10k–50k
+
+                        </option>
+
+                        <option>
+
+                            ₹50k+
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+
+
+                <div class="field">
+
+                    <label>
+
+                        Upload Logo / Reference
+
+                    </label>
+
+                    <input type="file">
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="full">
+
+                <label>
+
+                    Describe Requirements
+
+                </label>
+
+                <textarea></textarea>
+
+            </div>
+
+
+
+
+
+            <button class="submit">
+
+                Request Quote
+
+            </button>
+
+        </form>
+
+
+    </section>
+
+</body>
+
+</html>
