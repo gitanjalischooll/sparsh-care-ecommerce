@@ -1,6 +1,3 @@
-# sparsh-care-ecommerce
-A responsive website for a handmade soap and personal care brand with product showcase, customization, and wholesale features.
-
 # SPARSH-CARE Website
 
 SPARSH-CARE is a handmade soap and personal care products website developed as a web development project.
